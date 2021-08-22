@@ -1,14 +1,14 @@
 <?php
         
 /*              
-        Plugin Name: Polls
-        Plugin URI: https://github.com/NoahY/q2a-poll
-        Plugin Update Check URI: https://raw.github.com/NoahY/q2a-poll/master/qa-plugin.php
-        Plugin Description: Ask poll questions
+        Plugin Name: blog
+        Plugin URI: https://github.com/helaluddinzahir/q2a-blog
+        Plugin Update Check URI: https://raw.github.com/helaluddinzahir/q2a-blog/master/qa-plugin.php
+        Plugin Description: write a blog post
         Plugin Version: 2.3
-        Plugin Date: 2011-09-05
-        Plugin Author: NoahY
-        Plugin Author URI:                              
+        Plugin Date: 2021-08-22
+        Plugin Author: helal Uddin zahir
+        Plugin Author URI: https://tollashi.net/user/Helaluddinzahir             
         Plugin License: GPLv2                           
         Plugin Minimum Question2Answer Version: 1.5
 */                      
@@ -19,15 +19,15 @@
                     exit;   
     }               
 
-    qa_register_plugin_module('module', 'qa-poll-admin.php', 'qa_poll_admin', 'Poll Admin');
-    qa_register_plugin_module('event', 'qa-poll-check.php', 'qa_poll_event', 'Poll Admin');
-    qa_register_plugin_module('page', 'qa-poll-page.php', 'qa_poll_page', 'Poll page');
+    qa_register_plugin_module('module', 'qa-blog-admin.php', 'qa_blog_admin', 'blog Admin');
+    qa_register_plugin_module('event', 'qa-blog-check.php', 'qa_blog_event', 'blog Admin');
+    qa_register_plugin_module('page', 'qa-blog-page.php', 'qa_blog_page', 'blog page');
     
-    qa_register_plugin_layer('qa-poll-layer.php', 'Poll Layer');
+    qa_register_plugin_layer('qa-blog-layer.php', 'blog Layer');
                     
     if(function_exists('qa_register_plugin_phrases')) {
-        qa_register_plugin_overrides('qa-poll-overrides.php');
-        qa_register_plugin_phrases('qa-poll-lang-*.php', 'polls');
+        qa_register_plugin_overrides('qa-blog-overrides.php');
+        qa_register_plugin_phrases('qa-blog-lang-*.php', 'blogs');
     } 
 
 	if(!function_exists('qa_permit_check')) {
