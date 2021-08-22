@@ -1,19 +1,19 @@
 <?php
-	class qa_poll_admin {
+	class qa_blog_admin {
 
 	function option_default($option) {
 		
 		switch($option) {
-		case 'permit_post_poll':
+		case 'permit_post_blog':
 			return QA_PERMIT_USERS;
-		case 'permit_vote_poll':
+		case 'permit_vote_blog':
 			return QA_PERMIT_USERS;
 		case 'poll_enable_subnav':
 			return true;
 
 
 		case 'poll_css':
-			return '#qa-poll-div {
+			return '#qa-blog-div {
 	background-color: #D9E3EA;
 	border: 1px solid #658296;
 	font-size: 12px;
